@@ -1,0 +1,12 @@
+name: Project-start
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: make install
+      - run: make build
+      - run: make start
+      - run: make test
+      - run: make list
